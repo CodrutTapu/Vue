@@ -55,7 +55,17 @@
             <div v-bind:class="compClasses">
                 <span>Vasile</span>
             </div>
-            </div>
+            <hr>
+
+            <h1>Conditionals</h1>
+            <button v-on:click="error = !error">Toggle Error</button>
+            <button v-on:click="sucess = !sucess">Toggle Sucess</button>
+            <p v-if="error">There has been an error!</p>
+            <p v-else-if="sucess">Yayyyy sucess!</p>
+            <!-- v-show="error" v-show="error" - it doesn't remove elment from DOM, it puts display: none-->
+            <hr>
+
+            <h1>Looping</h1>
             <hr>
 
         </div>
