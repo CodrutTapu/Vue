@@ -14,6 +14,8 @@ new Vue({
         formAge: '',
         a: 0,
         b: 0,
+        available: false,
+        nearby: false
     },
     methods: {
         greet: function(time) {
@@ -47,6 +49,12 @@ new Vue({
         addToB: function() {
             console.log('addToB');
             return parseInt(this.b) + parseInt(this.age);
+        },
+        compClasses: function() {
+            return {
+                available: this.available,
+                nearby: this.nearby
+            }
         }
     }
 });
