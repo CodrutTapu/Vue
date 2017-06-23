@@ -11,17 +11,19 @@ new Vue({
         x: 0,
         y: 0,
         formName: '',
-        formAge: ''
+        formAge: '',
+        a: 0,
+        b: 0,
     },
     methods: {
         greet: function(time) {
             return 'Good ' + time + ' ' + this.name + '!'
         },
         add: function(inc) {
-            this.age += inc;
+            this.age = parseInt(this.age) + parseInt(inc);
         },
         subtract: function(dec) {
-            this.age -= dec;
+            this.age = parseInt(this.age) - parseInt(dec);
         },
         updateXY: function(event) {
             this.x = event.offsetX;
@@ -35,6 +37,16 @@ new Vue({
         },
         logAge: function() {
             console.log('You entered your age!');
+        }
+    },
+    computed: {
+        addToA: function() {
+            console.log('addToA');
+            return parseInt(this.a) + parseInt(this.age);
+        },
+        addToB: function() {
+            console.log('addToB');
+            return parseInt(this.b) + parseInt(this.age);
         }
     }
 });

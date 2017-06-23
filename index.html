@@ -13,13 +13,19 @@
             <p v-html="websiteTag"></p>
             <p>Name: {{ name }}</p>
             <p>Job: {{ job }}</p>
+            <hr>
+
             <button v-on:click="add(1)">Add a Year</button>
             <button v-on:click="subtract(1)">Subtract a Year</button>
             <button v-on:dblclick.once="add(10)">Add 10 Years</button>
             <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
             <p>My age is {{ age }}!</p>
+            <hr>
+
             <div id="canvas" v-on:mousemove="updateXY">{{ x }},{{ y }}</div>
             <a v-on:click.prevent='click' href="http://codrut.rocks"> Codrut Tapu</a>
+            <hr>
+
             <h1>Keyboard Events</h1>
             <label for="name">Name:</label>
             <input type="text" name="name" value="" v-on:keyup.enter="logName" v-model="formName">
@@ -27,6 +33,15 @@
             <label for="age">Age:</label>
             <input type="text" name="age" value="" v-on:keyup="logAge" v-model="formAge">
             <span>{{ formAge }}</span>
+            <hr>
+
+            <h1>Computed Properties</h1>
+            <button v-on:click="a++">Add to A</button>
+            <button v-on:click="b++">Add to B</button>
+            <p>A - {{ a }}</p>
+            <p>B - {{ b }}</p>
+            <p>Age + A = {{ addToA }}</p>
+            <p>Age + B = {{ addToB }}</p>
         </div>
         <script src="app.js"></script>
     </body>
