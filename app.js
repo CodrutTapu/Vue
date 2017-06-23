@@ -4,7 +4,9 @@ new Vue({
     el: '#vue-app',
     data: {
         name: 'Codrut',
-        job: 'Student'
+        job: 'Student',
+        website: 'http://codrut.rocks',
+        websiteTag: '<a href="http://codrut.rocks">Personal website 2</a>'
     },
     methods: {
         greet: function(time) {
