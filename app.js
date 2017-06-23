@@ -9,7 +9,9 @@ new Vue({
         website: 'http://codrut.rocks',
         websiteTag: '<a href="http://codrut.rocks">Personal website 2</a>',
         x: 0,
-        y: 0
+        y: 0,
+        formName: '',
+        formAge: ''
     },
     methods: {
         greet: function(time) {
